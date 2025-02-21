@@ -45,7 +45,7 @@ export default function App() {
               path="/dashboard"
               element={
                 <AuthorityProtectedRoute>
-                  <Navigation />{" "}
+                  <Navigation />
                 </AuthorityProtectedRoute>
               }
             />
