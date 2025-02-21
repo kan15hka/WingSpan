@@ -1,0 +1,6 @@
+Flask~=3.1.0
+Flask-JWT-Extended~=4.7.1
+SQLAlchemy~=2.0.38
+Flask-Cors~=5.0.0
+marshmallow~=3.26.1
+passlib~=1.7.4
