@@ -14,7 +14,6 @@ export default function AuthorityProfileModal({
     try {
       const response = await axiosInstance.get(`/get_authority/${user.id}`);
       setUserData(response.data);
-      console.log("Fetched user data:", response.data);
     } catch (error) {
       console.error("Profile error:", error);
       setShowProfileModal(false);

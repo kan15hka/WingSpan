@@ -76,7 +76,6 @@ export default function AirplaneModal({
     if (modalData.type == modalType.ADD) {
       onAddAirplane(formData);
     } else {
-      console.log(`id: ${modalData.data?.id}`);
       onEditAirplane(formData, modalData.data?.id);
     }
   };

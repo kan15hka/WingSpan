@@ -158,7 +158,6 @@ export default function FlightModal({
 
   const onAddFlight = async (flightData) => {
     try {
-      console.log(flightData);
       const data = await addFlight(flightData);
       toast.open(
         data.message || "Flight added successfully.",

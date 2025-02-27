@@ -47,7 +47,6 @@ const UsersTable = ({ data, onTableDeletePressed }) => {
       const response = await axiosInstance.get(`/user_bookings/${userId}`);
       const bookingsList = response.data["bookings"];
       setUserBookings(bookingsList);
-      console.log(response);
     } catch (error) {
       console.error("Profile error:", error);
       setOpenModal(false);

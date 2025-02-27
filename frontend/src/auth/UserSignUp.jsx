@@ -51,7 +51,6 @@ export default function UserSignUp() {
       gender: gender,
       contact_number: contactNumber,
     };
-    console.log(userSignUpData);
 
     setIsLoading(true);
     try {

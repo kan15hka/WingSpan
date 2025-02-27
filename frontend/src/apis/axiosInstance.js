@@ -9,7 +9,8 @@ import {
 } from "../helper/auth";
 
 // const API_BASE_URL = "http://127.0.0.1:5000/api";
-const API_BASE_URL = "https://wing-span-backend.vercel.app/api";
+const API_BASE_URL =
+  import.meta.env.VITE_REACT_APP_API_BASE_URL || "http://127.0.0.1:5000/api";
 
 export const axiosInstance = axios.create({
   baseURL: API_BASE_URL,

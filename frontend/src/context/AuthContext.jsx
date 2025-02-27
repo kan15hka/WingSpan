@@ -16,7 +16,6 @@ export const AuthProvider = ({ children }) => {
       try {
         const userData = getUserFromLocalStorage();
         if (userData.accessToken) {
-          console.log(userData.role);
           setUser(userData);
         }
       } catch (error) {

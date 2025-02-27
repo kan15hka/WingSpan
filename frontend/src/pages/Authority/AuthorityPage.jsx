@@ -48,7 +48,6 @@ export default function AuthorityPage() {
   }
 
   const onAddAuthority = async (authorityData) => {
-    console.log(authorityData);
     try {
       const responseData = await addAuthority(authorityData);
 

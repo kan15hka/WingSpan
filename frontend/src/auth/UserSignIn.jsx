@@ -29,7 +29,6 @@ export default function UserSignIn() {
       username: username,
       password: password,
     };
-    console.log(userSignInData);
 
     setIsLoading(true);
     try {
@@ -43,7 +42,6 @@ export default function UserSignIn() {
         accessToken: responseData.access_token,
         refreshToken: responseData.refresh_token,
       };
-      console.log(userResponse);
       loadUser(userResponse);
       toast.open(
         responseData?.message || "SignIn successful",

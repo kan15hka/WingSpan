@@ -16,7 +16,6 @@ export default function Dashboard() {
     try {
       setLoading(true);
       const response = await axiosInstance.get("/get_dashboard_data");
-      console.log(response.data);
       setDashBoardData(response.data);
     } catch (error) {
       setError(

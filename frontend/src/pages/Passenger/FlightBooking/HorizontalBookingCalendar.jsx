@@ -17,7 +17,6 @@ const getWeekDays = (startDate) => {
       dayNumber: date.getDate(),
     });
   }
-  //   console.log(dates);
   return dates;
 };
 
@@ -63,9 +62,6 @@ export default function HorizontalBookingCalendar({
     calenderSelectedStartDate.setDate(
       calenderSelectedStartDate.getDate() - calenderSelectedStartDate.getDay()
     );
-
-    console.log("Selected Date:", formatDate(calenderSelectedDate));
-    console.log("Week Start Date:", formatDate(calenderSelectedStartDate));
 
     setCurrentWeekStart(calenderSelectedStartDate);
     setSelectedDate(calenderSelectedDate); // Ensure selectedDate is only the picked date

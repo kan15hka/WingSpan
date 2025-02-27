@@ -47,7 +47,6 @@ export default function HomePage() {
       date: date,
       count: count,
     };
-    console.log(searchData);
     navigate("/book-flights", { state: searchData });
   };
 

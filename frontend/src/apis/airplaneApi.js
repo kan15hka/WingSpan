@@ -28,7 +28,6 @@ export const addAirplanes = async (formData) => {
 };
 
 export const editAirplanes = async (formData, airplane_id) => {
-  console.log(`ID: ${airplane_id}`);
   try {
     const response = await axiosInstance.put(
       `/edit_airplane/${airplane_id}`,

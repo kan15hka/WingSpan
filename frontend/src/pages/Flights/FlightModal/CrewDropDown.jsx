@@ -83,7 +83,6 @@ export default function CrewDropDown({
             onChange={(e) => {
               setQuery(e.target.value);
               setShowDropdown(true);
-              // console.log(filteredCrew);
             }}
             onFocus={() => setShowDropdown(true)}
             placeholder={

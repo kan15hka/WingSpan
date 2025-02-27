@@ -62,7 +62,6 @@ export default function CrewModal({
       role: role.toLowerCase(),
       status: status.toLowerCase(),
     };
-    // console.log(data);
     if (modalData.type === modalType.ADD) {
       onAddCrew(data);
     } else {

@@ -57,8 +57,6 @@ export default function FlightsPage() {
       setFlights(data);
       const formattedData = formatFlightsByDate(data);
       setFlightsDateData(formattedData);
-      // console.log(flightsDateData);
-      // // console.log(formattedData[""].airplane.airline);
     } catch (error) {
       console.log(error);
       setError(

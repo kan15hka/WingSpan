@@ -18,12 +18,10 @@ export default function ProfileModal({
   const [error, setError] = useState(false);
 
   const getUser = async () => {
-    console.log("Profile Clicked");
     setLoading(true);
     try {
       const response = await axiosInstance.get(`/get_user/${user.id}`);
       setUserData(response.data);
-      console.log(response.data); // Log response instead of state
     } catch (error) {
       console.error("Profile error:", error);
       setError("Cannot fetch User details");

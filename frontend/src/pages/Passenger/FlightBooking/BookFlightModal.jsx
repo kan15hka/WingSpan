@@ -47,7 +47,6 @@ export default function BookFlightModal({
       flight_id: flight.id,
       seats_to_book: seatCount,
     };
-    console.log(bookingData);
     try {
       const responseData = await bookFlight(bookingData);
       toast.open(

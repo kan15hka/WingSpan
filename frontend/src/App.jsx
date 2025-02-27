@@ -90,7 +90,6 @@ export default function Root() {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1000);
 
   useEffect(() => {
-    console.log(window.innerWidth);
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 1000);
     };

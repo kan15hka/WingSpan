@@ -52,7 +52,6 @@ export default function AuthorityModal({ modalData, onAddAuthority, onClose }) {
       password: password,
       role: role.toLocaleLowerCase(),
     };
-    console.log(authorityData);
     onAddAuthority(authorityData);
   };
 

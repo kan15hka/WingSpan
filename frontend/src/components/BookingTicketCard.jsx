@@ -28,7 +28,6 @@ export default function BookingTicketCard({ booking, onDeleteBooking }) {
         {user.role === "admin" && (
           <div
             onClick={() => {
-              console.log(booking.booking_id);
               onDeleteBooking(booking.booking_id);
             }}
             className="p-2 rounded-full bg-cutomGrey-light hover:bg-gray-300"
