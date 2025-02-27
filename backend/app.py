@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask,jsonify
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
@@ -62,6 +62,10 @@ def create_app():
     #     db.create_all()
 
     api=Api(app)
+
+    @app.route("/",methods=['GET'])
+    def entry_route():
+        return jsonify({"message":"Welcome to Wingspan Backend."})
 
     api.register_blueprint(user_blp)
     api.register_blueprint(airplane_blp)
