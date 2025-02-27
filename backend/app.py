@@ -78,4 +78,11 @@ def create_app():
     jwt.revoked_token_loader(revoked_token_callback)
     jwt.expired_token_loader(access_token_expires_callback)
 
+    @app.after_request
+    def after_request(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')  # Change '*' to your specific domain if needed
+        response.headers.add('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        return response
+
     return app
