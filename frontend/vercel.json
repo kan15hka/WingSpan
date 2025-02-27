@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://wing-span-zxbn.vercel.app/api/"
+    }
+  ]
+}
