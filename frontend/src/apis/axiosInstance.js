@@ -8,8 +8,8 @@ import {
   removeTokenCookie,
 } from "../helper/auth";
 
-const API_BASE_URL = "http://127.0.0.1:5000/api";
-// const API_BASE_URL = "https://wing-span-backend.vercel.app/api";
+// const API_BASE_URL = "http://127.0.0.1:5000/api";
+const API_BASE_URL = "https://wing-span-backend.vercel.app/api";
 
 export const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
