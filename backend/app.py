@@ -25,15 +25,15 @@ migrate = Migrate()
 
 def create_app():
     app=Flask(__name__)
-    # CORS(app, origins=["*"], supports_credentials=True)
-    CORS(app, 
-        origins=["http://localhost:5173", 
-                 "https://wing-span.vercel.app", 
-                 "https://wing-span-zxbn.vercel.app",
-                 "https://wing-span-zxbn-ny5geebpi-kanishka2727-gmailcoms-projects.vercel.app"],
-        supports_credentials=True,
-        expose_headers=["Content-Type", "Authorization"],
-        allow_headers=["Content-Type", "Authorization"])
+    CORS(app, origins=["*"], supports_credentials=True)
+    # CORS(app, 
+    #     origins=["http://localhost:5173", 
+    #              "https://wing-span.vercel.app", 
+    #              "https://wing-span-zxbn.vercel.app",
+    #              "https://wing-span-zxbn-ny5geebpi-kanishka2727-gmailcoms-projects.vercel.app"],
+    #     supports_credentials=True,
+    #     expose_headers=["Content-Type", "Authorization"],
+    #     allow_headers=["Content-Type", "Authorization"])
 
     url = URL.create(
         drivername="postgresql+psycopg2",
