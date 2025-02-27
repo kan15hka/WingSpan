@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -35,7 +35,7 @@ const PassengerAuthRedirect = ({ children }) => {
   return user ? <Navigate to="/" /> : children;
 };
 
-export default function App() {
+function App() {
   return (
     <div>
       <AuthProvider>
@@ -83,5 +83,31 @@ export default function App() {
         </Router>
       </AuthProvider>
     </div>
+  );
+}
+
+export default function Root() {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1000);
+
+  useEffect(() => {
+    console.log(window.innerWidth);
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1000);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isSmallScreen ? (
+    <div className=" bg-primary-light flex items-center justify-center h-screen text-sm text-white">
+      <div className="w-2/3 text-center">
+        {" "}
+        Oops! This app isn't optimized for small screens. Please use a desktop
+        for the best experience.
+      </div>
+    </div>
+  ) : (
+    <App />
   );
 }

@@ -59,7 +59,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="h-screen mx-auto w-5/6 my-6">
+      <div className="h-screen mx-auto  w-11/12 my-6">
         <HomeHero onProfileClicked={onProfileClicked} />
         <FlightBookingInputBox
           fromCity={fromCity}
