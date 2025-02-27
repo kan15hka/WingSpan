@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://wing-span-zxbn-ny5geebpi-kanishka2727-gmailcoms-projects.vercel.app/api"
+      "destination": "wing-span-backend.vercel.app/api"
     }
   ]
 }
