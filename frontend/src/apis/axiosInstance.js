@@ -9,7 +9,7 @@ import {
 } from "../helper/auth";
 
 // Make sure this matches the actual URL where your Flask API is deployed
-const API_BASE_URL = "wing-span-backend.vercel.app/api";
+const API_BASE_URL = "/api";
 // Alternative if needed:
 // const API_BASE_URL = "https://wing-span-zxbn-ny5geebpi-kanishka2727-gmailcoms-projects.vercel.app/api";
 
