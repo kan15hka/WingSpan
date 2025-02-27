@@ -61,9 +61,9 @@ const UsersTable = ({ data, onTableDeletePressed }) => {
   };
 
   return (
-    <div className="h-full flex flex-col items-center p-4">
+    <div className="mx-auto min-w-[950px]  flex flex-col text-center p-4">
       {/* Filter & Column Controls */}
-      <div className="flex w-10/12 mb-4 gap-4">
+      <div className="flex w-full mb-4 gap-4">
         {/* Name Filter Input */}
         <input
           type="text"
@@ -105,29 +105,31 @@ const UsersTable = ({ data, onTableDeletePressed }) => {
       </div>
 
       {/* Table */}
-      <div className="w-10/12 overflow-x-auto h-full ">
+      <div className="w-full overflow-x-auto h-full ">
         <table className="min-w-full bg-white rounded-md">
           <thead>
             <tr className="border-b text-sm text-primary-light">
-              {showColumns.id && <th className="px-4 py-2 text-left">Id</th>}
+              {showColumns.id && <th className="px-4 py-2 text-center">Id</th>}
               {showColumns.name && (
-                <th className="px-4 py-2 text-left">Name</th>
+                <th className="px-4 py-2 text-center">Name</th>
               )}
               {showColumns.username && (
-                <th className="px-4 py-2 text-left">Username</th>
+                <th className="px-4 py-2 text-center">Username</th>
               )}
-              {showColumns.dob && <th className="px-4 py-2 text-left">DOB</th>}
+              {showColumns.dob && (
+                <th className="px-4 py-2 text-center">DOB</th>
+              )}
               {showColumns.gender && (
-                <th className="px-4 py-2 text-left">Gender</th>
+                <th className="px-4 py-2 text-center">Gender</th>
               )}
               {showColumns.contact && (
-                <th className="px-4 py-2 text-left">Contact</th>
+                <th className="px-4 py-2 text-center">Contact</th>
               )}
               {showColumns.nationality && (
-                <th className="px-4 py-2 text-left">Nationality</th>
+                <th className="px-4 py-2 text-center">Nationality</th>
               )}
 
-              <th className="px-4 py-2 text-left"></th>
+              <th className="px-4 py-2 text-center"></th>
             </tr>
           </thead>
           <tbody>

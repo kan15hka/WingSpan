@@ -36,7 +36,7 @@ export default function FlightFiltersCard({
       </div>
 
       {/* Journey Duration Slider */}
-      <div className={` ${!user.role === "user" && "border-b"}`}>
+      <div className={` ${user && !user.role === "user" && "border-b"}`}>
         <div className="mt-2 ">
           <div className="text-sm font-semibold">Journey duration</div>
           <PriceSlider
@@ -47,7 +47,7 @@ export default function FlightFiltersCard({
           />
         </div>
       </div>
-      {!user.role === "user" && (
+      {user && !user?.role === "user" && (
         <div className="mt-2 ">
           <div className="text-sm font-semibold">Flight Availability</div>
           <div className="flex gap-2 mt-2">

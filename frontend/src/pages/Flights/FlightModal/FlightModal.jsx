@@ -140,7 +140,7 @@ export default function FlightModal({
     const newFlightData = {
       airplane_id: selectedPlaneId,
       crew_ids: crewIds,
-      date: formatDate(selectedDate),
+      date: selectedDate,
       from_city: fromCity,
       from_code: fromCode,
       from_time: fromTime,
@@ -158,6 +158,7 @@ export default function FlightModal({
 
   const onAddFlight = async (flightData) => {
     try {
+      console.log(flightData);
       const data = await addFlight(flightData);
       toast.open(
         data.message || "Flight added successfully.",

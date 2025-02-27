@@ -42,63 +42,69 @@ export default function Dashboard() {
           {formatDateToddMonthYYYY(new Date())}
         </div>
       </div>
-      <div className=" w-full flex gap-2">
-        <div className="flex-1">
-          <div className="flex-1 flex mb-2 gap-2">
-            <AnalyticsCard
-              parameterLabel="Total Airplanes"
-              parameterValue={dashBoardData?.total_airplanes}
-              parameterDesc="Airplane models and brands"
+      <div className="flex flex-col">
+        {" "}
+        <div className="w-full flex flex-col md:flex-row gap-2">
+          <div className="flex-1">
+            <div className="flex-1 flex mb-2 gap-2">
+              <AnalyticsCard
+                parameterLabel="Total Airplanes"
+                parameterValue={dashBoardData?.total_airplanes}
+                parameterDesc="Airplane models and brands"
+              />
+              <AnalyticsCard
+                parameterLabel="Total Users"
+                parameterValue={dashBoardData?.total_users}
+                parameterDesc="No. of registered users"
+              />
+            </div>
+            <div className="flex-1 flex gap-2">
+              <AnalyticsCard
+                parameterLabel="Flights Today"
+                parameterValue={dashBoardData?.total_flights_today}
+                parameterDesc="No. of flights scheduled"
+              />
+              <AnalyticsCard
+                parameterLabel="Revenue Today"
+                parameterValue={`$ ${dashBoardData?.revenue.today}`}
+                parameterDesc="Total revenue generated"
+              />
+            </div>
+          </div>
+          <div className="flex-1">
+            <RevenueChart perDayRevenueData={dashBoardData?.revenue.per_date} />
+          </div>
+        </div>
+        <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2">
+            <AnalyticsPieCard
+              uniqueKey="seatsBooked"
+              parameterLabel="Seats Booked"
+              parameterValue={`${dashBoardData?.seats.booked} / ${dashBoardData?.seats.total}`}
+              parameterDesc="Total seats booked"
+              labelsList={["Booked", "Empty"]}
+              dataList={[
+                dashBoardData?.seats.booked,
+                dashBoardData?.seats.total,
+              ]}
             />
-            <AnalyticsCard
-              parameterLabel="Total Users"
-              parameterValue={dashBoardData?.total_users}
-              parameterDesc="No. of registered users"
+            <AnalyticsPieCard
+              uniqueKey="crewAvailable"
+              parameterLabel="Crew Available"
+              parameterValue={`${dashBoardData?.crew.available} / ${dashBoardData?.crew.total}`}
+              parameterDesc="Crew members available"
+              labelsList={["Assigned", "Free"]}
+              dataList={[
+                dashBoardData?.crew.available,
+                dashBoardData?.crew.total,
+              ]}
             />
           </div>
-          <div className="flex-1 flex gap-2">
-            <AnalyticsCard
-              parameterLabel="Flights Today"
-              parameterValue={dashBoardData?.total_flights_today}
-              parameterDesc="No. of flights scheduled"
-            />
-            <AnalyticsCard
-              parameterLabel="Revenue Today"
-              parameterValue={`$ ${dashBoardData?.revenue.today}`}
-              parameterDesc="Total revenue generated"
+          <div className="flex-1">
+            <FlightsBarChart
+              perDayFlightSchedules={dashBoardData?.flights_per_date}
             />
           </div>
-        </div>
-        <div className="flex-1">
-          <RevenueChart perDayRevenueData={dashBoardData?.revenue.per_date} />
-        </div>
-      </div>
-      <div className="mt-2 grid grid-cols-2 gap-2">
-        <div className="grid grid-cols-2 gap-2">
-          <AnalyticsPieCard
-            uniqueKey="seatsBooked"
-            parameterLabel="Seats Booked"
-            parameterValue={`${dashBoardData?.seats.booked} / ${dashBoardData?.seats.total}`}
-            parameterDesc="Total seats booked"
-            labelsList={["Booked", "Empty"]}
-            dataList={[dashBoardData?.seats.booked, dashBoardData?.seats.total]}
-          />
-          <AnalyticsPieCard
-            uniqueKey="crewAvailable"
-            parameterLabel="Crew Available"
-            parameterValue={`${dashBoardData?.crew.available} / ${dashBoardData?.crew.total}`}
-            parameterDesc="Crew members available"
-            labelsList={["Assigned", "Free"]}
-            dataList={[
-              dashBoardData?.crew.available,
-              dashBoardData?.crew.total,
-            ]}
-          />
-        </div>
-        <div className="flex-1">
-          <FlightsBarChart
-            perDayFlightSchedules={dashBoardData?.flights_per_date}
-          />
         </div>
       </div>
     </div>

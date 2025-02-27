@@ -234,7 +234,6 @@ def edit_flight(flight_id):
 
 @flight_blp.route("/api/pass_get_flights", methods=['GET'])
 @flight_blp.response(200)
-@jwt_required()
 def get_passenger_flights():
     try:
         flights = FlightModel.query.all()

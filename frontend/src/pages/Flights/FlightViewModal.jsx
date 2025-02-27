@@ -26,7 +26,7 @@ export default function FlightViewModal({
             ? "CREW DETAILS"
             : "BOOKING DETAILS"}
         </div>
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-gray-500 mb-2">
           {" "}
           {flightViewModalData.type === flightViewModalType.AIRPLANE
             ? "Airplane details of the flight."

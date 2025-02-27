@@ -57,7 +57,11 @@ def get_user_bookings (user_id):
             .all()
 
         if not bookings:
-            return jsonify({"message": "No bookings found for this user."}), 404
+            jsonify({
+                "user_id": user_id,
+                "total_bookings": 0,
+                "bookings": []
+            }), 200
 
         # Format the response
         bookings_data = []

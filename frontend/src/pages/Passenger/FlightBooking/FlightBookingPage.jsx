@@ -131,7 +131,7 @@ export default function FlightBookingPage() {
   }, [passengerFlightsDateData, date, fromCode, toCode]);
 
   return (
-    <div className="bg-cutomGrey-light pb-10">
+    <div className="w-full bg-cutomGrey-light pb-10">
       <FlightBookigHeader
         fromCity={fromCity}
         setFromCity={setFromCity}
@@ -148,14 +148,14 @@ export default function FlightBookingPage() {
         onSearchClicked={onSearch}
         onProfileClicked={onProfileClicked}
       />
-      <div className="px-14 pt-4">
+      <div className="text-center w-11/12  overflow-x-hidden mx-auto">
         <HorizontalBookingCalendar
           selectedDate={date}
           setSelectedDate={setDate}
         />
-        <div className="flex gap-3">
+        <div className=" w-full  flex gap-3">
           <FlightFiltersCard />
-          <div className="flex-1">
+          <div className="flex-1 w-[400px]">
             {loading ? (
               <div className="flex justify-center items-center mt-10">
                 <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-primary-light"></div>

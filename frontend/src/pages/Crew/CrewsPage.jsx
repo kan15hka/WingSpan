@@ -97,13 +97,15 @@ export default function CrewsPage() {
   if (loading) return <PageMsgDisplay text="Loading..." />;
   if (error) return <PageMsgDisplay text={error} />;
   return (
-    <div className="w-full h-full  flex flex-col">
+    <div className="w-full flex flex-col">
       <div className="mb-5 text-2xl font-semibold">Crews</div>
+
       <CrewTable
         data={crews}
         setModalData={setModalData}
         onTableDeletePressed={onDeleteCrew}
       />
+
       <CrewModal
         modalData={modalData}
         onAddCrew={onAddCrew}

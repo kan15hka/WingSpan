@@ -125,7 +125,7 @@ export default function FlightsPage() {
         </div>
       </div>
 
-      <div className=" w-full h-full  max-w-3xl mx-auto  ">
+      <div className="  h-full w-[800px] mx-auto overflow-x-hidden">
         <HorizontalCalendar
           selectedDate={selectedDate}
           setSelectedDate={setSelectedDate}

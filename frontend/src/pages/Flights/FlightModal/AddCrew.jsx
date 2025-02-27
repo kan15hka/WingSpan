@@ -46,7 +46,7 @@ export default function AddCrew({
 
   return (
     <div className="h-[450px]  overflow-y-scroll flex flex-col justify-between">
-      <div className="flex-1">
+      <div className="flex-1 pb-12">
         <CrewDropDown
           type={crewType.PILOT}
           crewData={pilotList}

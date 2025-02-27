@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosAirplane } from "react-icons/io";
 import {
   MdDelete,
@@ -30,10 +30,17 @@ export default function BookFlightModal({
 }) {
   const { user } = useAuth();
   const toast = useToast();
+  const [isBooking, setIsBooking] = useState(false);
   const onBookFlight = async () => {
-    if (user.role !== "user") {
-      toast.open("Authority cannot book flights.", toastType.ERROR);
+    if (!user) {
+      setShowBookingModal(false);
+      return toast.open("Login to book flights.", toastType.ERROR);
     }
+    if (user.role !== "user") {
+      setShowBookingModal(false);
+      return toast.open("Authority cannot book flights.", toastType.ERROR);
+    }
+    setIsBooking(true);
     const userId = user.id;
     const bookingData = {
       user_id: userId,
@@ -54,6 +61,8 @@ export default function BookFlightModal({
         toastType.ERROR
       );
     } finally {
+      setIsBooking(false);
+
       setShowBookingModal(false);
       fetchPassengerFlights();
     }
@@ -139,7 +148,7 @@ export default function BookFlightModal({
             onClick={onBookFlight}
             className="w-full rounded-md mt-3 text-center bg-primary-light hover:bg-primary text-white font-medium cursor-pointer py-2"
           >
-            Book Now
+            {isBooking ? "Booking..." : "Book Now"}
           </div>
         </div>
       )}

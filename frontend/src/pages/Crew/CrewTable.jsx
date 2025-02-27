@@ -39,9 +39,9 @@ const CrewTable = ({ data, setModalData, onTableDeletePressed }) => {
   const uniqueRoles = ["All", ...new Set(data.map((crew) => crew.role))];
 
   return (
-    <div className="h-full flex flex-col items-center p-4">
+    <div className="mx-auto min-w-[950px]  flex flex-col text-center p-4">
       {/* Filter & Column Controls */}
-      <div className="flex w-10/12 mb-4 gap-4">
+      <div className="flex w-full mb-4 gap-4">
         {/* Name Filter Input */}
         <input
           type="text"
@@ -121,27 +121,27 @@ const CrewTable = ({ data, setModalData, onTableDeletePressed }) => {
       </div>
 
       {/* Table */}
-      <div className="w-10/12 overflow-x-auto h-full ">
+      <div className="w-full overflow-x-auto h-full ">
         <table className="min-w-full bg-white rounded-md">
           <thead>
             <tr className="border-b text-sm text-primary-light">
               {showColumns.id && <th className="px-4 py-2 text-left">Id</th>}
               {showColumns.name && (
-                <th className="px-4 py-2 text-left">Name</th>
+                <th className="px-4 py-2 text-center">Name</th>
               )}
               {showColumns.role && (
-                <th className="px-4 py-2 text-left">Role</th>
+                <th className="px-4 py-2 text-center">Role</th>
               )}
               {showColumns.contact && (
-                <th className="px-4 py-2 text-left">Contact</th>
+                <th className="px-4 py-2 text-center">Contact</th>
               )}
               {showColumns.license && (
-                <th className="px-4 py-2 text-left">License</th>
+                <th className="px-4 py-2 text-center">License</th>
               )}
               {showColumns.status && (
-                <th className="px-4 py-2 text-left">Status</th>
+                <th className="px-4 py-2 text-center">Status</th>
               )}
-              <th className="px-4 py-2 text-left"></th>
+              <th className="px-4 py-2 text-center"></th>
             </tr>
           </thead>
           <tbody>
