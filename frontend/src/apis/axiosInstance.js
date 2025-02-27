@@ -8,11 +8,14 @@ import {
   removeTokenCookie,
 } from "../helper/auth";
 
-const API_BASE_URL =
-  "https://wing-span-zxbn-ny5geebpi-kanishka2727-gmailcoms-projects.vercel.app/api";
+// Make sure this matches the actual URL where your Flask API is deployed
+const API_BASE_URL = "https://wing-span-zxbn.vercel.app/api";
+// Alternative if needed:
+// const API_BASE_URL = "https://wing-span-zxbn-ny5geebpi-kanishka2727-gmailcoms-projects.vercel.app/api";
 
 export const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
+  withCredentials: true, // Important for CORS with credentials
 });
 
 const isTokenExpired = (token) => {

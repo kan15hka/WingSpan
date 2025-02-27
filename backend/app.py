@@ -25,7 +25,15 @@ migrate = Migrate()
 
 def create_app():
     app=Flask(__name__)
-    CORS(app, origins=["http://localhost:5173", "https://wing-span.vercel.app"])
+    # CORS(app, origins=["*"], supports_credentials=True)
+    CORS(app, 
+        origins=["http://localhost:5173", 
+                 "https://wing-span.vercel.app", 
+                 "https://wing-span-zxbn.vercel.app",
+                 "https://wing-span-zxbn-ny5geebpi-kanishka2727-gmailcoms-projects.vercel.app"],
+        supports_credentials=True,
+        expose_headers=["Content-Type", "Authorization"],
+        allow_headers=["Content-Type", "Authorization"])
 
     url = URL.create(
         drivername="postgresql+psycopg2",
@@ -78,11 +86,11 @@ def create_app():
     jwt.revoked_token_loader(revoked_token_callback)
     jwt.expired_token_loader(access_token_expires_callback)
 
-    @app.after_request
-    def after_request(response):
-        response.headers.add('Access-Control-Allow-Origin', '*')  # Change '*' to your specific domain if needed
-        response.headers.add('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
-        return response
+    # @app.after_request
+    # def after_request(response):
+    #     response.headers.add('Access-Control-Allow-Origin', '*')  # Change '*' to your specific domain if needed
+    #     response.headers.add('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
+    #     response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    #     return response
 
     return app
