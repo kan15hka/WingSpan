@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="  relative flex items-center justify-between ">
         <div className="flex items-center gap-2 ">
           <img
-            src="src/assets/logo.png"
+            src="/images/logo.webp"
             alt=""
             className="h-10 w-10 object-contain"
           />

@@ -74,7 +74,7 @@ export default function AuthoritySignIn() {
         <div className="absolute top-4 right-4 border rounded-md px-2 py-1 flex items-center gap-1 hover:bg-cutomGrey-light">
           <div>
             <img
-              src="src/assets/logo.png"
+              src="/images/logo.webp"
               alt="logoImg"
               className="h-6 w-6 object-contain"
             />

@@ -89,7 +89,7 @@ export default function UserSignUp() {
       <div className="relative p-4 border rounded-md md:w-1/2 lg:w-2/6">
         <div className="absolute top-4 right-4 border rounded-md px-2 py-1 flex items-center gap-1 hover:bg-cutomGrey-light">
           <img
-            src="src/assets/logo.png"
+            src="/images/logo.webp"
             alt="logoImg"
             className="h-6 w-6 object-contain"
           />

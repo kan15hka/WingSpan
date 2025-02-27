@@ -65,7 +65,7 @@ export default function SideBar({
       {/* Profile Section */}
       <div className="my-4 flex gap-2 items-center">
         <div className="h-10 w-10 flex items-center justify-center  rounded-md">
-          <img src="src/assets/logo.png" alt="logoImg" />{" "}
+          <img src="/images/logo.webp" alt="logoImg" />{" "}
         </div>
         <div
           className={`text-white text-lg font-semibold duration-300 ${

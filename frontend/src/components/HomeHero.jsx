@@ -10,7 +10,7 @@ export default function HomeHero({ onProfileClicked }) {
       <div className="relative flex items-center justify-between ">
         <div className="flex items-center gap-2 mr-2">
           <img
-            src="src/assets/logo.png"
+            src="/images/logo.webp"
             alt=""
             className="h-10 w-10 object-contain"
           />
@@ -37,7 +37,7 @@ export default function HomeHero({ onProfileClicked }) {
       </div>
       <div className="w-full  ">
         <img
-          src="src/assets/header.jpg"
+          src="/images/header.webp"
           alt=""
           className="h-40 md:h-48 lg:h-64 object-contain over mx-auto"
         />

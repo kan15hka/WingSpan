@@ -31,7 +31,7 @@ export default function FlightBookigHeader({
         <div className="flex gap-2 items-center">
           <div>
             <img
-              src="src/assets/logo.png"
+              src="/images/logo.webp"
               alt="logo "
               className="h-10 w-10 object-contain"
             />

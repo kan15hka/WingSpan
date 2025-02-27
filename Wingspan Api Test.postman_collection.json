@@ -1,0 +1,1059 @@
+{
+	"info": {
+		"_postman_id": "bab363c9-cb9a-4af4-b40b-671be559e3dc",
+		"name": "Wingspan Api Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41672762"
+	},
+	"item": [
+		{
+			"name": "Authority",
+			"item": [
+				{
+					"name": "Get Authorities",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5ODE2ODA5LCJqdGkiOiJkNzdmY2FmMi0xN2ExLTQ3ZDItOWRmOC1jMTgyYzFiMWVjMDkiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzM5ODE2ODA5LCJjc3JmIjoiOTgzYTJhNDItOWRlYi00ZDcwLTk1ZjQtODM4ZmYxNjJkMGNhIiwiZXhwIjoxNzM5ODE3NzA5LCJyb2xlIjoiYWRtaW4ifQ.df6lXzHbtw9twDSMEcXO72soMtDGAOmu8DkDWQeziLM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"kan15hka\",\r\n    \"password\":\"Kanishka4$\",\r\n    \"role\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/get_authorities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_authorities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authority SignUp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5ODEyODgyLCJqdGkiOiI3OTQyZjhkNy0xNzFjLTQ0ZWItYTY0MC1mOGYxOWIyNjA3YWYiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzM5ODEyODgyLCJjc3JmIjoiODBjNjg5MWMtNDA1Yy00ZDM4LThjODUtMTNlMTZkNWJiZTI4IiwiZXhwIjoxNzM5ODEzNzgyLCJyb2xlIjoiYWRtaW4ifQ.o50jcLRCOxdgzEbRwuJCorsfLpGwC_PTmyhOUNN6cHY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Kanishka\",\r\n    \"reg_no\":\"STAFF-1234\",\r\n    \"username\":\"kan15hka\",\r\n    \"password\":\"Kanishka4$\",\r\n    \"role\":\"staff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/add_authority",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"add_authority"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authority SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"he15en\",\r\n    \"password\":\"Heisen4$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/auth_sign_in",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth_sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authority SignOut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5NTU4OTI0LCJqdGkiOiIyZWFlMTZjMy0xYWIyLTQzYTQtYmRkOC1iNTQ5NTNkNDcxZTQiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoia2FuMTVoa2EiLCJuYmYiOjE3Mzk1NTg5MjQsImNzcmYiOiJhMGRkYjcyMy03ZmE3LTQ4NGMtOGQ1ZS1iMjc3YzE4MGYyZGQiLCJleHAiOjE3Mzk1NTk4MjR9.TVC4fY0O4O2hPDwFgLBT_-lzoPrT_7CXdVOXAkPyUKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/auth_sign_out",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth_sign_out"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authority SignOut Refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTU1ODkyNCwianRpIjoiNDNhODlkYTgtN2UyZi00YTJhLTkyZmUtMzlhODIzZGZjZjA2IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJrYW4xNWhrYSIsIm5iZiI6MTczOTU1ODkyNCwiY3NyZiI6Ijg5MGY4MGJmLWQxMzktNDFjMy1hZWU1LTBjYjRiYWViNzBlNyIsImV4cCI6MTc0MDE2MzcyNH0.LK9RH_bZaz1SwY5rBYuBPSWKQQF7invEgus-4wKo1xE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/auth_sign_out-refresh",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth_sign_out-refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Authority",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5ODE2ODA5LCJqdGkiOiJkNzdmY2FmMi0xN2ExLTQ3ZDItOWRmOC1jMTgyYzFiMWVjMDkiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzM5ODE2ODA5LCJjc3JmIjoiOTgzYTJhNDItOWRlYi00ZDcwLTk1ZjQtODM4ZmYxNjJkMGNhIiwiZXhwIjoxNzM5ODE3NzA5LCJyb2xlIjoiYWRtaW4ifQ.df6lXzHbtw9twDSMEcXO72soMtDGAOmu8DkDWQeziLM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/delete_authority/18",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete_authority",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Authority",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Passenger",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"walt3rwhit3\",\r\n    \"password\":\"Walterwhite4$\",\r\n    \"name\":\"Walter\",\r\n    \"dob\":\"12-08-2003\",\r\n    \"nationality\":\"India\",\r\n    \"gender\":\"male\",\r\n    \"contact_number\":\"8072828935\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/pass_sign_up",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pass_sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"walt3rwhit3\",\r\n    \"password\":\"Walterwhite4$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/pass_sign_in",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pass_sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignOut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5OTY5NTY4LCJqdGkiOiIwNmU3NWYzNi1mODBjLTQ3N2EtYTYwMS02YWY5MDFhZmNjOTMiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoid2FsdDNyd2hpdDMiLCJuYmYiOjE3Mzk5Njk1NjgsImNzcmYiOiJlYzEzYzUzMi1kNzY0LTQ4MWYtYjQ1Yy04N2RiN2QxZDQzYzkiLCJleHAiOjE3Mzk5NzA0Njh9.PtXQOeVhHom_dK7xxJv_rS8EJPPYqViWawkdL4EV9Qo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/pass_sign_out",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pass_sign_out"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTk2ODMyMywianRpIjoiNjkzYzU5YTEtOGIzMC00NGRjLWI1MjktNjc3ZDgzMDgyNDAxIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJ3YWx0M3J3aGl0MyIsIm5iZiI6MTczOTk2ODMyMywiY3NyZiI6IjQ3MmFhZjUxLTg0Y2QtNGI4MC1hOTIwLTczNDQwNjlmMjMyZSIsImV4cCI6MTc0MDU3MzEyM30.xBc2wPE4sFLsVKl9yEMkETTzmnF5gZSTtadfdiyNJU4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/pass_refresh",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pass_refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignOut-Refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTE4OTY1OSwianRpIjoiZjI2Y2U2ZWQtMDdhMy00Y2FhLTg0NjgtYzNhY2ZmZDlkYWQ1IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJrYW4xNWhrYSIsIm5iZiI6MTczOTE4OTY1OSwiY3NyZiI6IjE2NjQ2ODUwLTA4NWQtNDYwMy1hZDQ4LTBlYzc2MzVmYTBlOCIsImV4cCI6MTczOTc5NDQ1OX0.8hb6eqg9BBIwZifOiDEX7iBwPDMoxuoDRQfKosxhl6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/sign_out-refresh",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"sign_out-refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzQwMDIxMTA3LCJqdGkiOiIyMzY5YjNmNS00ZGRiLTRlMmQtYjlkMC1jZGQ4MDZhMTJkMWUiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoid2FsdDNyd2hpdDMiLCJuYmYiOjE3NDAwMjExMDcsImNzcmYiOiIwYjI0MWY2Zi1lN2MwLTRiYjQtYjQzYy02YzJjNjMxZDZiMmQiLCJleHAiOjE3NDAwMjIwMDd9.pyiwFb_BFAL5FFy89DWlnrO_Fk7OCduV5-PCRvVsRfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/get_user/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzQwMDIzNTg3LCJqdGkiOiIyMmI1ODMwMy1hYjg5LTQ2Y2EtOGEyMi1hZGY3ZjdmYWVhMmQiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzQwMDIzNTg3LCJjc3JmIjoiMWM3YmZlODUtOGZmNS00YWNlLTgwODUtNmFmNDY4MTdlM2FhIiwiZXhwIjoxNzQwMDI0NDg3LCJyb2xlIjoiYWRtaW4ifQ.IpnPE3O5HMxHYvFM9wFNakQGBMzSaklW13bv5oTFMyI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/get_all_user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_all_user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Airplane",
+			"item": [
+				{
+					"name": "Get Airplanes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5NjA2MDI4LCJqdGkiOiJlNTk5NGUyMS1mOWM0LTRmNjQtYWFmNi0wNzMyZTYzY2I4Y2IiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoia2FuMTVoa2EiLCJuYmYiOjE3Mzk2MDYwMjgsImNzcmYiOiIzYzBjY2RkNC1jNmQ3LTRjYjQtOTBjYy1hZTFkMGE4YjNmMmQiLCJleHAiOjE3Mzk2MDY5MjgsInJvbGUiOiJhZG1pbiJ9.aib0Oh3aI76CTREYmaxp4ugt4rLhtOM4iRB2q9v0mX0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/get_airplanes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_airplanes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Airplane Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5NzczNTI1LCJqdGkiOiJlYmYxNDEzYS01NTA3LTRjYTItOTM3Ny04Y2Y3Y2RiYjlhMGIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoia2FuMTVoa2EiLCJuYmYiOjE3Mzk3NzM1MjUsImNzcmYiOiJmNjk2NWIxMC1jMGU5LTQxMDItYWZmOC1kZDAxNmRjYTBkOWYiLCJleHAiOjE3Mzk3NzQ0MjUsInJvbGUiOiJhZG1pbiJ9.krk136yq5bLBty4PCMU2zPUSVp5f87H_cempW3ui1XY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/get_airplane_image/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_airplane_image",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Airplane",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5NjA2NTI4LCJqdGkiOiIxMTA0N2JlNi1jOGEyLTRkNjctOTkzZS0zMmZkNTIzYzY4NmMiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzM5NjA2NTI4LCJjc3JmIjoiOWE1MTkyY2UtMDk5OC00NjgwLTgwODktNGE5MjA4NjBjZTdhIiwiZXhwIjoxNzM5NjA3NDI4LCJyb2xlIjoic3RhZmYifQ.id7Neim4ur3k2wVq-zT9vVSP44ipf9XlxO9BDMLxPVo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/delete_airplane/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete_airplane",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Avialable Airplanes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5Njk4NTAyLCJqdGkiOiJjNjliMWI0OS1hMmJiLTRhZGYtOWRmNC1kMTYyYjQ4MTc3MzkiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoia2FuMTVoa2EiLCJuYmYiOjE3Mzk2OTg1MDIsImNzcmYiOiIxMTViZGIwMy0zMjAwLTQxOTgtYmRmMy0zY2U0MzgyN2ZhNzIiLCJleHAiOjE3Mzk2OTk0MDIsInJvbGUiOiJhZG1pbiJ9.tV7FcEAEk51-EdG4SQ53HM-sQLpeTzrfU_pNdtK4KLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/available_airplanes?date=15-02-2025",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"available_airplanes"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "15-02-2025"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crew",
+			"item": [
+				{
+					"name": "Get Crew",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/get_crew",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_crew"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Crew",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact_number\": \"567-456-1234\",\r\n    \"license_number\": \"LIC343434\",\r\n    \"name\": \"Tyler Durden\",\r\n    \"role\": \"pilot\",\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/add_crew",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"add_crew"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Crew",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact_number\": \"547-456-7890\",\r\n    \"license_number\": \"LIC673789\",\r\n    \"name\": \"Tyler Durden\",\r\n    \"role\": \"pilot\",\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/edit_crew/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"edit_crew",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Crew Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/delete_crew/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete_crew",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Available Crew",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5NzAwMDM3LCJqdGkiOiJmYzNiZjI5YS1kOWU5LTQ1MDYtOTljZi01Y2MyMDQwZDkxMGYiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoia2FuMTVoa2EiLCJuYmYiOjE3Mzk3MDAwMzcsImNzcmYiOiJkYjNiMGI0Ni1hZDE2LTRhYTEtYmZiMi1kN2FjYWUzZWU4ZGIiLCJleHAiOjE3Mzk3MDA5MzcsInJvbGUiOiJhZG1pbiJ9.6b1EmkKjn991zVh_n9FdCVFAA7p5dRdtQR8IAOr1H1M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/available_crew?date=15-02-2025",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"available_crew"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "15-02-2025"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flights",
+			"item": [
+				{
+					"name": "Get Flights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzQwMDQ2NjA4LCJqdGkiOiJiMjFhM2M5NS02NDVhLTQ4ZTItOTE1OC1lMGE5ODRjZDg5YWQiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzQwMDQ2NjA4LCJjc3JmIjoiM2E2MGNiMTItZDQ2NS00Nzk5LTg0MTctZmI4ZTFjZDZiYjg3IiwiZXhwIjoxNzQwMDQ3NTA4LCJyb2xlIjoiYWRtaW4ifQ.ALxKKybI5FHygPwOoXO48S9pN68We4w7EH3GC-oxG_I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/get_flights",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get_flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Flight",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5NzgxMTUyLCJqdGkiOiI1YTk1YzJmYi00MTY3LTRmNDYtOTA2NS02ZDAxNTE4NjA3NjEiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoia2FuMTVoa2EiLCJuYmYiOjE3Mzk3ODExNTIsImNzcmYiOiIxMTE1ZmYzMi03YzUxLTRjYmEtYmE0ZC1jMDE5NWI3MmNlZDgiLCJleHAiOjE3Mzk3ODIwNTIsInJvbGUiOiJhZG1pbiJ9.h4L8gAfmI7Gz2WhzV08kJ0dG0dQOqH-naPRwvaqHQHU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/delete_flight/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete_flight",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Passenger Flights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzM5OTkwMzM3LCJqdGkiOiIyYWRjZDRlZi05NzMwLTRkNGEtYjQ3Yi1kMzc4ZGE1YjUwMjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoid2FsdDNyd2hpdDMiLCJuYmYiOjE3Mzk5OTAzMzcsImNzcmYiOiI3YWZjN2IyMy1lYTBjLTQ2NjAtODRmZi1lZGU4NzcxYjVlNjUiLCJleHAiOjE3Mzk5OTEyMzd9.3T8JYTlMLErh3zweMTgW4-cnrcvG6IPmx1jYnxgT6IE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/pass_get_flights",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pass_get_flights"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Get UserBookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzQwMDMyOTIxLCJqdGkiOiIyMDQ4M2QzMy0yZGRjLTQyMjgtYTc0OS0wNDViZjY4OWM1NDYiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzQwMDMyOTIxLCJjc3JmIjoiYzU1Y2EzMjEtNWM0ZS00NjViLWFlY2ItYzIzM2Q5MDgxYzMxIiwiZXhwIjoxNzQwMDMzODIxLCJyb2xlIjoiYWRtaW4ifQ.8sXRM7hhiLlALmTY555NOq11ekPETA5OP7hQAHemRvo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/user_bookings/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user_bookings",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzQwMDMwMDIzLCJqdGkiOiJhMmE5ZDkxNy1kNDkyLTQwZDktOWQ3MS1mYzAzZGMxOTE2MTMiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzQwMDMwMDIzLCJjc3JmIjoiNTI5NGYzMTYtZWZiMi00MmZmLTliYjQtYTc1MzEwYWYzY2UzIiwiZXhwIjoxNzQwMDMwOTIzLCJyb2xlIjoiYWRtaW4ifQ.CIw1_yeuIT5ix2d78z0vSBfZVevAVuaTv12OkbqkFco",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/delete_booking/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete_booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzQwMDMyOTIxLCJqdGkiOiIyMDQ4M2QzMy0yZGRjLTQyMjgtYTc0OS0wNDViZjY4OWM1NDYiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzQwMDMyOTIxLCJjc3JmIjoiYzU1Y2EzMjEtNWM0ZS00NjViLWFlY2ItYzIzM2Q5MDgxYzMxIiwiZXhwIjoxNzQwMDMzODIxLCJyb2xlIjoiYWRtaW4ifQ.8sXRM7hhiLlALmTY555NOq11ekPETA5OP7hQAHemRvo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/flight_bookings/8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"flight_bookings",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard Get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzQwMDQ4MjQzLCJqdGkiOiJhZTIyNjQwOS1iMDk4LTQwYjgtYmRjYi1jMTYzYmFjMDQyOTYiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiaGUxNWVuIiwibmJmIjoxNzQwMDQ4MjQzLCJjc3JmIjoiZTgzMzRmNjItODZlMy00MGM1LWIwZmMtOThiNjQ5MGQyMDIwIiwiZXhwIjoxNzQwMDQ5MTQzLCJyb2xlIjoiYWRtaW4ifQ.qGMzC8xbbgSood_V-8TNXk-MeZRd8WyDkD9VOxOUCC0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/get_dashboard_data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"get_dashboard_data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
