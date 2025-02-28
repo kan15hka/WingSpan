@@ -29,7 +29,7 @@ def create_app():
     app=Flask(__name__)
     # CORS(app, origins=["*"], supports_credentials=True)
     CORS(app,
-         origins=["http://localhost:5173",
+         origins=["http://localhost:5173","http://localhost:5174",
                   "https://wing-span.vercel.app"],
          supports_credentials=True,
          allow_headers=["Content-Type", "Authorization"])
