@@ -2,6 +2,8 @@
 
 **Wingspan** is a seamless flight booking application built with **React**, **Flask**, and **PostgreSQL**. It provides an intuitive interface for users to search, book, and manage flights with ease.
 
+![Image](https://github.com/user-attachments/assets/fd9246ee-849f-41c9-a6dd-c5451356321e)
+
 ## 🚀 Features
 - User authentication & role-based access
 - Flight search and booking system
